@@ -1,0 +1,19 @@
+button {
+  transition: 0.4s;
+  font-size: medium;
+  font-weight: bold;
+  background-color: lightslategray;
+  color: white;
+  border: 2px solid lightslategray;
+  border-bottom: 0;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin: 5px;
+  margin-left: 0;
+  margin-bottom: 0;
+  border-radius: 12px 12px 0 0;
+}
+.selected {
+  background-color: white;
+  color: lightslategray;
+}

@@ -1,0 +1,16 @@
+<div class="panel">
+  <app-tab
+    *ngFor="let tab of tabs; let i = index"
+    [title]="tab.title"
+    [content]="tab.content"
+    [index]="i"
+    [selection]="currentTab"
+    (onSelection)="select($event)"
+  >
+  </app-tab>
+
+
+  <div class="box">
+    <p>{{tabs[currentTab].content}}</p>
+  </div>
+</div>

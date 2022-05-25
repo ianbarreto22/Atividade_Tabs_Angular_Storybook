@@ -1,0 +1,6 @@
+<button
+  (click)="onSelection.emit(index)"
+  [ngClass]="{selected: index === selection}"
+>
+  {{title}}
+</button>
