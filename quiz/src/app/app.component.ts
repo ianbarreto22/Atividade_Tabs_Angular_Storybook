@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Panel, PanelService } from "./services/panel.service";
 
 @Component({
   selector: "app-root",
@@ -6,5 +7,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "CodeSandbox";
+  title = "Tabs";
+
+  constructor(public panelService: PanelService){}
+
+  updatePanel(panel: Panel){
+    console.log(panel.tabs)
+    this.panelService.update(panel)
+  }
 }

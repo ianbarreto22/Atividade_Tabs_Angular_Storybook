@@ -1,0 +1,86 @@
+label {
+    font-weight: bold;
+}
+
+form {
+    margin-top: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px rgb(75, 75, 75);
+    color: lightslategray;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 15px;
+}
+
+form p {
+    font-weight: bold;
+    padding: 25px;
+}
+
+
+
+.linha input, label{
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.linha input{
+    margin-bottom: 20px;
+    display: block;
+    padding: 5px;
+}
+
+.linha{
+    clear: both;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-35 {
+    width: 35%;
+}
+
+.b-box{
+    margin-left: 85%;
+    
+    margin-bottom: 15px;
+}
+
+.button{
+    background-color: lightslategray;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.button:hover {
+    transition: 0.1s;
+    background-color: transparent;
+    color: lightslategray;
+    border: 1px solid lightslategray;
+    cursor: pointer;
+}
+
+.button:disabled{
+    opacity: 50%;
+}
+
+form .error {
+    padding: 10px;
+    color: red;
+}
+
+hr {
+    margin-top: 15px;
+    color: lightslategray;
+}

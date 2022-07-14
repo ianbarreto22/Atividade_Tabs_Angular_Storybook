@@ -1,18 +1,11 @@
-<app-panel [tabs]="[
-    {
-        title: 'Tab 1',
-        content: 'Conteúdo 1'
-    },
-    {
-        title: 'Tab 2',
-        content: 'Conteúdo 2'
-    },
-    {
-        title: 'Tab 3',
-        content: 'Conteúdo 3'
-    },
-    {
-        title: 'Tab 4',
-        content: 'Conteúdo 4'
-    },
-]"></app-panel>
+<div class="linha">
+    <div class="coluna-50">
+        <app-panel-form (onSubmit)="updatePanel($event)"></app-panel-form>
+    </div>
+    <div class="coluna-50">
+        <div class="container">
+            <h1>Conteúdo</h1>
+            <app-panel [tabs]="panelService.panel.tabs"></app-panel>
+        </div>
+    </div>
+</div>
