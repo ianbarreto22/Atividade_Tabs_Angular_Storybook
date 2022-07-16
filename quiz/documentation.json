@@ -87,15 +87,128 @@
             "methods": []
         }
     ],
-    "injectables": [],
+    "injectables": [
+        {
+            "name": "PanelService",
+            "id": "injectable-PanelService-e081dec1debaddeec15cb8444511d6f326a0c52096788b40b1a4843a2eec62f294fdeeea39179ac9acb07e2e8b43c0ec82beaabaff1ce3f19da84e75da5b53ed",
+            "file": "src/app/services/panel.service.ts",
+            "properties": [
+                {
+                    "name": "panel",
+                    "defaultValue": "new Panel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Panel",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methods": [
+                {
+                    "name": "update",
+                    "args": [
+                        {
+                            "name": "panel",
+                            "type": "Panel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "panel",
+                            "type": "Panel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\r\n\r\nexport class Panel {\r\n    constructor(\r\n        public tabs: {title: string, content: string}[] = [{title: \"Tab\", content: \"Sem Conteúdo\"}]\r\n    ){}\r\n\r\n\r\n}\r\n\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class PanelService {\r\n    panel: Panel = new Panel\r\n\r\n    update(panel: Panel){\r\n        this.panel = panel\r\n    }\r\n}",
+            "type": "injectable"
+        }
+    ],
     "guards": [],
     "interceptors": [],
-    "classes": [],
+    "classes": [
+        {
+            "name": "Panel",
+            "id": "class-Panel-e081dec1debaddeec15cb8444511d6f326a0c52096788b40b1a4843a2eec62f294fdeeea39179ac9acb07e2e8b43c0ec82beaabaff1ce3f19da84e75da5b53ed",
+            "file": "src/app/services/panel.service.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import { Injectable } from \"@angular/core\";\r\n\r\nexport class Panel {\r\n    constructor(\r\n        public tabs: {title: string, content: string}[] = [{title: \"Tab\", content: \"Sem Conteúdo\"}]\r\n    ){}\r\n\r\n\r\n}\r\n\r\n@Injectable({\r\n    providedIn: 'root'\r\n})\r\nexport class PanelService {\r\n    panel: Panel = new Panel\r\n\r\n    update(panel: Panel){\r\n        this.panel = panel\r\n    }\r\n}",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "tabs",
+                        "type": "literal type[]",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "[{title: \"Tab\", content: \"Sem Conteúdo\"}]"
+                    }
+                ],
+                "line": 3,
+                "jsdoctags": [
+                    {
+                        "name": "tabs",
+                        "type": "literal type[]",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "[{title: \"Tab\", content: \"Sem Conteúdo\"}]",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "tabs",
+                    "defaultValue": "[{title: \"Tab\", content: \"Sem Conteúdo\"}]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 5,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
     "directives": [],
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-d9f2edb0180972d6d3419690a8e3bfe3916a4883865577bd1e76b75c6874a39a326b1c324a50c853ad3e66da874fffb4e87db39b8850a09a3fac47d0d8fe7ddf",
+            "id": "component-AppComponent-e621520c7d42c57652bd4b045096bb00c8edff0b7162ece22654d92d031086230245389b86a21ea70cfc309c8bd5d2279fb1aece3b02d790c996e860136d8225",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -115,17 +228,58 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
+                    "name": "panelService",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "PanelService",
+                    "optional": false,
+                    "description": "",
+                    "line": 12,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
                     "name": "title",
-                    "defaultValue": "\"CodeSandbox\"",
+                    "defaultValue": "\"Tabs\"",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 9
+                    "line": 10
                 }
             ],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "updatePanel",
+                    "args": [
+                        {
+                            "name": "panel",
+                            "type": "Panel",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "panel",
+                            "type": "Panel",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -133,16 +287,42 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from \"@angular/core\";\n\n@Component({\n  selector: \"app-root\",\n  templateUrl: \"./app.component.html\",\n  styleUrls: [\"./app.component.css\"]\n})\nexport class AppComponent {\n  title = \"CodeSandbox\";\n}\n",
+            "sourceCode": "import { Component } from \"@angular/core\";\nimport { Panel, PanelService } from \"./services/panel.service\";\n\n@Component({\n  selector: \"app-root\",\n  templateUrl: \"./app.component.html\",\n  styleUrls: [\"./app.component.css\"]\n})\nexport class AppComponent {\n  title = \"Tabs\";\n\n  constructor(public panelService: PanelService){}\n\n  updatePanel(panel: Panel){\n    console.log(panel.tabs)\n    this.panelService.update(panel)\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "div {\n  text-align: center;\n}\n",
+                    "data": ".linha{\n  margin: 50px;\n  display: flex;\n  flex-flow: row wrap;\n}\n.coluna-50{\n  width: 50%;\n}\n.container{\n  margin-top: 50px;\n  margin-right: 50px;\n  border-radius: 10px;\n  padding: 15px;\n  padding-top: 0px;\n  border: lightslategray;\n  box-shadow: 0 0 3px 3px rgb(75, 75, 75);\n  color: lightslategray;\n}\nh1 {\n    font-weight: bold;\n    font-size: 30px;\n    padding: 15px;\n}\n",
                     "styleUrl": "./app.component.css"
                 }
             ],
             "stylesData": "",
-            "templateData": "<app-panel [tabs]=\"[\r\n    {\r\n        title: 'Tab 1',\r\n        content: 'Conteúdo 1'\r\n    },\r\n    {\r\n        title: 'Tab 2',\r\n        content: 'Conteúdo 2'\r\n    },\r\n    {\r\n        title: 'Tab 3',\r\n        content: 'Conteúdo 3'\r\n    },\r\n    {\r\n        title: 'Tab 4',\r\n        content: 'Conteúdo 4'\r\n    },\r\n]\"></app-panel>\r\n"
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "panelService",
+                        "type": "PanelService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "panelService",
+                        "type": "PanelService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<div class=\"linha\">\r\n    <div class=\"coluna-50\">\r\n        <app-panel-form (onSubmit)=\"updatePanel($event)\"></app-panel-form>\r\n    </div>\r\n    <div class=\"coluna-50\">\r\n        <div class=\"container\">\r\n            <h1>Conteúdo</h1>\r\n            <app-panel [tabs]=\"panelService.panel.tabs\"></app-panel>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -511,6 +691,186 @@
             "templateData": "<div class=\"panel\">\r\n  <app-tab\r\n    *ngFor=\"let tab of tabs; let i = index\"\r\n    [title]=\"tab.title\"\r\n    [content]=\"tab.content\"\r\n    [index]=\"i\"\r\n    [selection]=\"currentTab\"\r\n    (onSelection)=\"select($event)\"\r\n  >\r\n  </app-tab>\r\n\r\n\r\n  <div class=\"box\">\r\n    <p>{{tabs[currentTab].content}}</p>\r\n  </div>\r\n</div>\r\n"
         },
         {
+            "name": "PanelFormComponent",
+            "id": "component-PanelFormComponent-f81aad5079e7d8695c87b32b93493a121a8a064506e8d5cb05feb9111ef0d9528eedd7aff88419e4ed1502821f87ec9b76cbad9a0112bb39d2bd819d8b8b2f1b",
+            "file": "src/app/components/panel-form/panel-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-panel-form",
+            "styleUrls": [
+                "./panel-form.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./panel-form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "panel",
+                    "defaultValue": "new Panel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "Panel",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onSubmit",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "NgForm",
+                    "optional": false,
+                    "description": "",
+                    "line": 14,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "NgForm"
+                        }
+                    ]
+                },
+                {
+                    "name": "panelService",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "PanelService",
+                    "optional": false,
+                    "description": "",
+                    "line": 16,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "numTabsChange",
+                    "args": [
+                        {
+                            "name": "num",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "num",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "submit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "trackByFn",
+                    "args": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "index",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ValueConverter } from \"@angular/compiler/src/render3/view/template\";\r\nimport { Component, Input, Output, ViewChild, EventEmitter } from \"@angular/core\";\r\nimport { NgForm } from \"@angular/forms\";\r\nimport { Panel, PanelService } from \"src/app/services/panel.service\";\r\n\r\n@Component({\r\n    selector:'app-panel-form',\r\n    templateUrl:'./panel-form.component.html',\r\n    styleUrls:['./panel-form.component.css']\r\n})\r\nexport class PanelFormComponent{\r\n    @Input() panel: Panel = new Panel\r\n    @Output() onSubmit = new EventEmitter()\r\n    @ViewChild(NgForm) form!: NgForm\r\n\r\n    constructor(public panelService: PanelService){\r\n\r\n    }\r\n\r\n    submit(){\r\n        \r\n        this.onSubmit.emit({\r\n            tabs: [...this.panel.tabs]\r\n        })\r\n        this.panel = {tabs: []}\r\n        this.form.reset\r\n    }\r\n\r\n\r\n    trackByFn(index: number){\r\n        return index\r\n    }\r\n\r\n    numTabsChange(num: number){\r\n        for(let i=0; i < this.panel.tabs.length; i++){\r\n            if(this.panel.tabs[i] === undefined){\r\n                this.panel.tabs[i] = {title: '', content: ''}\r\n            }\r\n        }\r\n    }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "label {\r\n    font-weight: bold;\r\n}\r\n\r\nform {\r\n    margin-top: 50px;\r\n    margin-right: 50px;\r\n    border-radius: 10px;\r\n    box-shadow: 0 0 3px 3px rgb(75, 75, 75);\r\n    color: lightslategray;\r\n}\r\n\r\nh1 {\r\n    font-weight: bold;\r\n    font-size: 30px;\r\n    padding: 15px;\r\n}\r\n\r\nform p {\r\n    font-weight: bold;\r\n    padding: 25px;\r\n}\r\n\r\n\r\n\r\n.linha input, label{\r\n    margin-left: 50px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.linha input{\r\n    margin-bottom: 20px;\r\n    display: block;\r\n    padding: 5px;\r\n}\r\n\r\n.linha{\r\n    clear: both;\r\n}\r\n\r\n.col-25 {\r\n    width: 25%;\r\n}\r\n\r\n.col-35 {\r\n    width: 35%;\r\n}\r\n\r\n.b-box{\r\n    margin-left: 85%;\r\n    \r\n    margin-bottom: 15px;\r\n}\r\n\r\n.button{\r\n    background-color: lightslategray;\r\n    color: white;\r\n    border-radius: 10px;\r\n    border: 1px solid transparent;\r\n    font-size: medium;\r\n    font-weight: bold;\r\n    margin-bottom: 20px;\r\n    padding: 10px;\r\n}\r\n\r\n.button:hover {\r\n    transition: 0.1s;\r\n    background-color: transparent;\r\n    color: lightslategray;\r\n    border: 1px solid lightslategray;\r\n    cursor: pointer;\r\n}\r\n\r\n.button:disabled{\r\n    opacity: 50%;\r\n}\r\n\r\nform .error {\r\n    padding: 10px;\r\n    color: red;\r\n}\r\n\r\nhr {\r\n    margin-top: 15px;\r\n    color: lightslategray;\r\n}",
+                    "styleUrl": "./panel-form.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "panelService",
+                        "type": "PanelService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "panelService",
+                        "type": "PanelService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<form #panelForm=\"ngForm\" (ngSubmit)=\"panelForm.valid && submit()\">\r\n    <h1>Tabs</h1>\r\n    <div class=\"linha\">\r\n        <label class=\"col-25\">Num. Tabs</label>\r\n        <input type=\"number\" class=\"col-35\" name=\"length\"\r\n         #numTabs=\"ngModel\"\r\n         [(ngModel)]=\"panel.tabs.length\" (ngModelChange)=\"numTabsChange($event)\"\r\n         min=\"1\" max=\"8\"/>\r\n        <div *ngIf=\"numTabs.dirty && numTabs.errors\" class=\"error col-25\">\r\n            <div *ngIf=\"numTabs.errors['min']\"> Deve haver pelo menos uma tab </div>\r\n            <div *ngIf=\"numTabs.errors['max']\"> Deve haver no máximo 8 tabs </div>\r\n        </div>\r\n    </div>\r\n\r\n    <hr/>\r\n\r\n    <div *ngFor=\"let tab of panel.tabs; index as i; trackBy: trackByFn\">\r\n        <p>Tab {{i+1}}</p>\r\n        <div class=\"linha\">\r\n            <label class=\"col-25\">Título</label>\r\n            <input type=\"text\"\r\n                #title=\"ngModel\"\r\n                name=\"title-{{i}}\"\r\n                [(ngModel)]=\"tab.title\"\r\n                required maxlength=\"12\"\r\n            />\r\n            <div *ngIf=\"title.dirty && title.errors\" class=\"error col-25\">\r\n                <div *ngIf=\"title.errors['required']\"> Digite o título </div>\r\n                <div *ngIf=\"title.errors['maxlength']\"> O título deve ter no máximo 12 caracteres </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"linha\">\r\n            <label class=\"col-25\">Conteúdo</label>\r\n            <input type=\"text\"\r\n                #content=\"ngModel\"\r\n                name=\"content-{{i}}\"\r\n                [(ngModel)]=\"tab.content\"\r\n                required maxlength=\"50\"\r\n            />\r\n            <div *ngIf=\"content.dirty && content.errors\" class=\"error col-25\">\r\n                <div *ngIf=\"content.errors['required']\"> Digite o conteúdo </div>\r\n            </div>\r\n        </div>\r\n\r\n        <hr *ngIf=\"i != this.panel.tabs.length - 1\"/>\r\n    </div>\r\n\r\n    <div class=\"b-box\">\r\n        <input type=\"submit\" value=\"Salvar\" [disabled]=\"panelForm.invalid\" class=\"button\"/>\r\n    </div>\r\n</form>"
+        },
+        {
             "name": "TabComponent",
             "id": "component-TabComponent-44691becae311aa8e2ccccdcd48ecbfe24aa227d8f6bcbf4e856504b4afde2fc4fee913a272705e17ad99cc3f2ad7bc075756eeb61b7323de0da0c1be45537c6",
             "file": "src/app/components/tab/app.tab.component.ts",
@@ -596,13 +956,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-7a42726b40a3492b04740b775ef39ea19923ffdd0372f43a00e6bb2e605e5073f4c651b25d0ff2365203d3b382b45ff1c59df026e8825fa07fb86374291b9faf",
+            "id": "module-AppModule-453e867ba2687d78ee642d52e769953a9ee55130d7aa66b2b723bd3a513595efacb25937f69845eeeacf156cc81ea40e6edc720d9d2328c2c39aeedc9843a289",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { BrowserModule } from \"@angular/platform-browser\";\nimport { NgModule } from \"@angular/core\";\n\nimport { AppComponent } from \"./app.component\";\nimport { PanelComponent } from \"./components/panel/app.panel.component\";\nimport { TabComponent } from \"./components/tab/app.tab.component\";\n\n@NgModule({\n  declarations: [[AppComponent], [PanelComponent], [TabComponent]],\n  imports: [BrowserModule],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { BrowserModule } from \"@angular/platform-browser\";\nimport { NgModule } from \"@angular/core\";\n\nimport { AppComponent } from \"./app.component\";\nimport { PanelComponent } from \"./components/panel/app.panel.component\";\nimport { TabComponent } from \"./components/tab/app.tab.component\";\nimport { PanelFormComponent } from \"./components/panel-form/panel-form.component\";\nimport { FormsModule } from \"@angular/forms\";\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    PanelComponent, \n    TabComponent, \n    PanelFormComponent\n  ],\n  imports: [\n    BrowserModule,\n    FormsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -610,7 +970,20 @@
                 },
                 {
                     "type": "declarations",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "PanelComponent"
+                        },
+                        {
+                            "name": "PanelFormComponent"
+                        },
+                        {
+                            "name": "TabComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "imports",
@@ -761,16 +1134,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Panel.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<PanelComponent>",
-                "defaultValue": "(args: PanelComponent) => ({\r\n    props: args,\r\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -778,7 +1141,27 @@
                 "defaultValue": "(args: Page) => ({\n  props: args,\n})"
             },
             {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Panel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PanelComponent>",
+                "defaultValue": "(args: PanelComponent) => ({\r\n    props: args,\r\n  })"
+            },
+            {
                 "name": "TP1",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Panel.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "TP2",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Panel.stories.ts",
@@ -952,6 +1335,16 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "TP2",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Panel.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ]
         },
@@ -961,7 +1354,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 3,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -970,7 +1363,16 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/panel-form/panel-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PanelFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -1007,6 +1409,24 @@
                 "name": "Tab",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/panel.service.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "Panel",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/services/panel.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "PanelService",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -1155,6 +1575,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "TP1",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Panel.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TP2",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

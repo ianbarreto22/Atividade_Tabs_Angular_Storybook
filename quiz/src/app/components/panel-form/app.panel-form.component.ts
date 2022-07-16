@@ -5,8 +5,8 @@ import { Panel, PanelService } from "src/app/services/panel.service";
 
 @Component({
     selector:'app-panel-form',
-    templateUrl:'./panel-form.component.html',
-    styleUrls:['./panel-form.component.css']
+    templateUrl:'./app.panel-form.component.html',
+    styleUrls:['./app.panel-form.component.css']
 })
 export class PanelFormComponent{
     @Input() panel: Panel = new Panel
